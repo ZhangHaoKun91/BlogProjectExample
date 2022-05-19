@@ -16,6 +16,11 @@
 		A6FD9CE228367617004E9BE2 /* ReverseValueTransmissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CE128367617004E9BE2 /* ReverseValueTransmissionTests.swift */; };
 		A6FD9CEC28367617004E9BE2 /* ReverseValueTransmissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CEB28367617004E9BE2 /* ReverseValueTransmissionUITests.swift */; };
 		A6FD9CEE28367617004E9BE2 /* ReverseValueTransmissionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CED28367617004E9BE2 /* ReverseValueTransmissionUITestsLaunchTests.swift */; };
+		A6FD9CFD28367769004E9BE2 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CFA28367768004E9BE2 /* PresentViewController.swift */; };
+		A6FD9CFE28367769004E9BE2 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CFB28367768004E9BE2 /* ProtocolViewController.swift */; };
+		A6FD9CFF28367769004E9BE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9CFC28367769004E9BE2 /* NotificationViewController.swift */; };
+		A6FD9D0228367781004E9BE2 /* EtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9D0028367781004E9BE2 /* EtensionManager.swift */; };
+		A6FD9D0328367781004E9BE2 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD9D0128367781004E9BE2 /* ClosureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		A6FD9CE728367617004E9BE2 /* ReverseValueTransmissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseValueTransmissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD9CEB28367617004E9BE2 /* ReverseValueTransmissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTransmissionUITests.swift; sourceTree = "<group>"; };
 		A6FD9CED28367617004E9BE2 /* ReverseValueTransmissionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTransmissionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A6FD9CFA28367768004E9BE2 /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		A6FD9CFB28367768004E9BE2 /* ProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
+		A6FD9CFC28367769004E9BE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		A6FD9D0028367781004E9BE2 /* EtensionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtensionManager.swift; sourceTree = "<group>"; };
+		A6FD9D0128367781004E9BE2 /* ClosureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 				A6FD9CCA28367616004E9BE2 /* AppDelegate.swift */,
 				A6FD9CCC28367616004E9BE2 /* SceneDelegate.swift */,
 				A6FD9CCE28367616004E9BE2 /* ViewController.swift */,
+				A6FD9CFC28367769004E9BE2 /* NotificationViewController.swift */,
+				A6FD9CFA28367768004E9BE2 /* PresentViewController.swift */,
+				A6FD9CFB28367768004E9BE2 /* ProtocolViewController.swift */,
+				A6FD9D0128367781004E9BE2 /* ClosureViewController.swift */,
+				A6FD9D0028367781004E9BE2 /* EtensionManager.swift */,
 				A6FD9CD028367616004E9BE2 /* Main.storyboard */,
 				A6FD9CD328367617004E9BE2 /* Assets.xcassets */,
 				A6FD9CD528367617004E9BE2 /* LaunchScreen.storyboard */,
@@ -259,7 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FD9CCF28367616004E9BE2 /* ViewController.swift in Sources */,
+				A6FD9D0228367781004E9BE2 /* EtensionManager.swift in Sources */,
+				A6FD9D0328367781004E9BE2 /* ClosureViewController.swift in Sources */,
+				A6FD9CFE28367769004E9BE2 /* ProtocolViewController.swift in Sources */,
+				A6FD9CFF28367769004E9BE2 /* NotificationViewController.swift in Sources */,
 				A6FD9CCB28367616004E9BE2 /* AppDelegate.swift in Sources */,
+				A6FD9CFD28367769004E9BE2 /* PresentViewController.swift in Sources */,
 				A6FD9CCD28367616004E9BE2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
