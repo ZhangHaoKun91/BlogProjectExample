@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class ClosureViewController: PresentViewController {
+    // 闭包声明
     var closure: (([String: String]) -> Void)?
 
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class ClosureViewController: PresentViewController {
         guard let closure = closure else {
             return
         }
+        // 闭包反向传值: 调用闭包
         closure(info)
         super.touch(sender: sender)
     }

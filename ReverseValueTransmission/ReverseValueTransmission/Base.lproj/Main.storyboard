@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,15 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lable" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQV-P6-sfD">
-                                <rect key="frame" x="189" y="285" width="36" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIViewController 反向传值 --zhk" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujy-di-PIw">
                                 <rect key="frame" x="76.5" y="204" width="261.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="正向传值" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qgb-BM-9g7">
+                                <rect key="frame" x="164" y="305.5" width="86" height="28.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lable" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQV-P6-sfD">
+                                <rect key="frame" x="189" y="265" width="36" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,14 +39,17 @@
                         <constraints>
                             <constraint firstItem="ZQV-P6-sfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5dr-q8-VDP"/>
                             <constraint firstItem="ujy-di-PIw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5uP-KB-u1y"/>
+                            <constraint firstItem="Qgb-BM-9g7" firstAttribute="top" secondItem="ZQV-P6-sfD" secondAttribute="bottom" constant="20" id="BRP-vN-S2u"/>
                             <constraint firstItem="ujy-di-PIw" firstAttribute="centerX" secondItem="ZQV-P6-sfD" secondAttribute="centerX" id="C3y-Zy-YQJ"/>
                             <constraint firstItem="ZQV-P6-sfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PUc-gQ-LvG"/>
                             <constraint firstItem="ujy-di-PIw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="ZIj-6F-tBC"/>
-                            <constraint firstItem="ZQV-P6-sfD" firstAttribute="top" secondItem="ujy-di-PIw" secondAttribute="bottom" constant="60" id="cVI-fh-Yc0"/>
+                            <constraint firstItem="ZQV-P6-sfD" firstAttribute="top" secondItem="ujy-di-PIw" secondAttribute="bottom" constant="40" id="cVI-fh-Yc0"/>
+                            <constraint firstItem="Qgb-BM-9g7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keW-80-GHE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lable" destination="ZQV-P6-sfD" id="nRI-hZ-VOf"/>
+                        <outlet property="textField" destination="Qgb-BM-9g7" id="WS2-Ba-Vwk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

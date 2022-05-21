@@ -9,9 +9,11 @@ import UIKit
 
 class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationControllerDelegate {
     @IBOutlet weak var lable: UILabel!
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 注册通知: 通知反向传值所需
         NotificationCenter.default.addObserver(self, selector: #selector(callback),
                                                name: NSNotification.Name(rawValue: "ReverseValueTransmission"),
                                                object: nil)
@@ -33,7 +35,7 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
         self.view.addSubview(button3)
 
         let button1Top = NSLayoutConstraint(item: button1, attribute: .top,
-                                            relatedBy: .equal, toItem: lable,
+                                            relatedBy: .equal, toItem: textField,
                                             attribute: .bottom, multiplier: 1, constant: 20)
         let button1CenterX = NSLayoutConstraint(item: button1, attribute: .centerX,
                                                 relatedBy: .equal, toItem: self.view,
@@ -63,7 +65,9 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
                                   button2CenterX, button3Top, button3CenterX, button2Width, button3Width])
     }
 
+    // 模态窗口下滑dismiss回调
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        // 小知识: 通过 presentationController.presentedViewController 拿到模态视图控制器实例
         if let protocolViewController = presentationController.presentedViewController as? ProtocolViewController {
             let info = [protocolViewController.textField1.text ?? "": protocolViewController.textField2.text ?? ""]
 
@@ -91,8 +95,10 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
         NotificationCenter.default.removeObserver(self)
     }
 
+    // MARK: 通知反向传值 属性正向传值
     @objc func touch1(sender: UIButton) {
         let notificationViewController = NotificationViewController()
+        notificationViewController.text = textField.text
         notificationViewController.presentationController?.delegate = self
 
         self.present(notificationViewController, animated: true) {
@@ -100,8 +106,9 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
         }
     }
 
+    // MARK: 协议反向传值 初始化函数正向传值
     @objc func touch2(sender: UIButton) {
-        let protocolViewController = ProtocolViewController()
+        let protocolViewController = ProtocolViewController(Text: textField.text)
         protocolViewController.presentationController?.delegate = self
         protocolViewController.reverseDelegate = self
 
@@ -110,12 +117,15 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
         }
     }
 
+    // MARK: 闭包反向传值 属性正向传值
     @objc func touch3(sender: UIButton) {
         let closureViewController = ClosureViewController()
+        closureViewController.text = textField.text
         closureViewController.presentationController?.delegate = self
 
+        // 闭包赋值
         closureViewController.closure = { info in
-            self.lable.text = "接收 Closure View 信息\nKey:\(info.keys.first ?? "")\nValue: \(info.values.first ?? "")"
+            self.lable.text = "接收 Closure View 信息\nKey:\(info.keys.first ?? "nil")\nValue: \(info.values.first ?? "nil")"
             self.lable.textColor = .red
             self.lable.isHidden = false
         }
@@ -125,15 +135,17 @@ class ViewController: UIViewController, ReverseProtocol, UIAdaptivePresentationC
         }
     }
 
+    // 通知反向传值: 通知回调
     @objc func callback(notifunction: NSNotification) {
-        lable.text = "接收 Notification View 信息\nKey:\(notifunction.userInfo?.keys.first as? String ?? "")" +
-        "\nValue: \(notifunction.userInfo?.values.first as? String ?? "")"
+        lable.text = "接收 Notification View 信息\nKey:\(notifunction.userInfo?.keys.first as? String ?? "nil")" +
+        "\nValue: \(notifunction.userInfo?.values.first as? String ?? "nil")"
         lable.textColor = .red
         lable.isHidden = false
     }
 
+    // 协议反向传值: 协议方法实现
     func informationTransmission(info: [String: String]) {
-        lable.text = "接收 Protocol View 信息\nKey:\(info.keys.first ?? "")\nValue: \(info.values.first ?? "")"
+        lable.text = "接收 Protocol View 信息\nKey:\(info.keys.first ?? "nil")\nValue: \(info.values.first ?? "nil")"
         lable.textColor = .red
         lable.isHidden = false
     }
