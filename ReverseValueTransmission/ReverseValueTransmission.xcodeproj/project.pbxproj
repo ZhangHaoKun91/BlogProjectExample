@@ -109,6 +109,9 @@
 		A6FD9CC928367616004E9BE2 /* ReverseValueTransmission */ = {
 			isa = PBXGroup;
 			children = (
+				A6FD9CD028367616004E9BE2 /* Main.storyboard */,
+				A6FD9CD528367617004E9BE2 /* LaunchScreen.storyboard */,
+				A6FD9CD828367617004E9BE2 /* Info.plist */,
 				A6FD9CCA28367616004E9BE2 /* AppDelegate.swift */,
 				A6FD9CCC28367616004E9BE2 /* SceneDelegate.swift */,
 				A6FD9CCE28367616004E9BE2 /* ViewController.swift */,
@@ -117,10 +120,7 @@
 				A6FD9D0128367781004E9BE2 /* ClosureViewController.swift */,
 				A6FD9CFA28367768004E9BE2 /* PresentViewController.swift */,
 				A6FD9D0028367781004E9BE2 /* EtensionManager.swift */,
-				A6FD9CD028367616004E9BE2 /* Main.storyboard */,
 				A6FD9CD328367617004E9BE2 /* Assets.xcassets */,
-				A6FD9CD528367617004E9BE2 /* LaunchScreen.storyboard */,
-				A6FD9CD828367617004E9BE2 /* Info.plist */,
 			);
 			path = ReverseValueTransmission;
 			sourceTree = "<group>";
